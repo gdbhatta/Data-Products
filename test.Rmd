@@ -1,0 +1,22 @@
+---
+title: "Week 2 Assignment"
+author: "Gopal Bhatta"
+date: "2/27/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Key religious amenities in Kathmandu, Nepal
+
+```{r}
+library(leaflet)
+my_map <- leaflet() %>%
+addTiles() %>%
+addMarkers(lat=27.71, lng=85.35, popup = "Hindu Temple - Pashupatinath") %>%
+addMarkers(lat=27.71, lng=85.29, popup = "Buddhanath") %>%
+addMarkers(lat=27.71, lng=85.31, popup = "Kathmandu Royal Palace")
+my_map
+```
